@@ -3,9 +3,9 @@
   // 設定
   // ================================
   const CONFIG = {
-    API_ENDPOINT: 'https://your-domain.vercel.app/api/chat', // バックエンドAPIのURL
-    LOGO_URL: 'https://your-domain.vercel.app/afterall_logo.png',
-    TURNSTILE_SITE_KEY: 'YOUR_TURNSTILE_SITE_KEY', // 空文字でスキップ
+      API_ENDPOINT: 'https://afterall-chatbot.vercel.app/api/chat',
+      LOGO_URL: 'https://afterall-chatbot.vercel.app/afterall_logo.png',
+      TURNSTILE_SITE_KEY: 'YOUR_TURNSTILE_SITE_KEY',
   };
 
   // ================================
