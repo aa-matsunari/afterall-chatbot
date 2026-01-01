@@ -6,6 +6,7 @@
     API_ENDPOINT: 'https://afterall-chatbot.vercel.app/api/chat',
     LOGO_URL: 'https://afterall-chatbot.vercel.app/afterall_logo.png',
     TURNSTILE_SITE_KEY: 'YOUR_TURNSTILE_SITE_KEY',
+    AUTO_OPEN_DELAY: 5000, // 自動で開くまでの時間（ミリ秒）。0で無効
   };
 
   // ================================
@@ -549,6 +550,16 @@
       
       // サジェスト
       this.showSuggestions();
+      
+      // 自動オープン
+      if (CONFIG.AUTO_OPEN_DELAY > 0) {
+        setTimeout(() => {
+          // まだ開いてなければ自動で開く
+          if (!this.window.classList.contains('open')) {
+            this.window.classList.add('open');
+          }
+        }, CONFIG.AUTO_OPEN_DELAY);
+      }
       
       // Turnstile
       if (!this.isVerified) {
