@@ -3,10 +3,11 @@
   // 設定
   // ================================
   const CONFIG = {
-    API_ENDPOINT: 'https://afterall-chatbot.vercel.app/api/chat',
-    LOGO_URL: 'https://afterall-chatbot.vercel.app/afterall_logo.png',
-    TURNSTILE_SITE_KEY: 'YOUR_TURNSTILE_SITE_KEY',
-};
+    API_ENDPOINT: 'https://your-domain.vercel.app/api/chat', // バックエンドAPIのURL
+    LOGO_URL: 'https://your-domain.vercel.app/afterall_logo.png',
+    TURNSTILE_SITE_KEY: 'YOUR_TURNSTILE_SITE_KEY', // 空文字でスキップ
+  };
+
   // ================================
   // スタイル
   // ================================
@@ -291,6 +292,41 @@
       color: #9ca3af;
     }
     
+    #afterall-chat-cta {
+      margin: 12px 16px;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: block;
+    }
+    
+    #afterall-chat-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    #afterall-chat-cta-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 4px;
+    }
+    
+    #afterall-chat-cta-price {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 4px;
+    }
+    
+    #afterall-chat-cta-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+    }
+    
     #afterall-rate-limit-error {
       padding: 8px 16px;
       background: #fef2f2;
@@ -400,6 +436,12 @@
         <div id="afterall-rate-limit-error"></div>
         
         <div id="afterall-chat-suggestions"></div>
+        
+        <a id="afterall-chat-cta" href="https://afterall.co.jp/contact" target="_blank" rel="noopener">
+          <div id="afterall-chat-cta-label">料金</div>
+          <div id="afterall-chat-cta-price">月額4万円〜</div>
+          <div id="afterall-chat-cta-desc">- アルバイト1人分以下でDXを実現 -</div>
+        </a>
         
         <div id="afterall-chat-input-area">
           <input type="text" id="afterall-chat-input" placeholder="メッセージを入力...">
